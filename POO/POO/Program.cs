@@ -1,15 +1,30 @@
-﻿
-using POO;
+﻿using POO;
 
 Console.WriteLine("POO Concepts");
 Console.WriteLine("============");
-try
+Employee employee1 = new SalaryEmployee()
 {
-    Console.WriteLine(new Date(2022, 2, 28));
-    Console.WriteLine(new Date(1974, 9, 23));
-    Console.WriteLine(new Date(1985, 11, 31));
-}
-catch (Exception error)
+    Id = 1010,
+    FirstName = "Sandra",
+    LastName = "Morales",
+    BirhtDate =  new Date(1990, 5, 23),
+    HiringDate  = new Date(2022, 1, 15),
+    IsActive = true,
+    Salary = 1815453.45M
+};
+
+Console.WriteLine(employee1);
+
+Employee employee2 = new CommissionEmployee()
 {
-    Console.WriteLine(error.Message);
-}
+    Id = 2020,
+    FirstName = "Patricia",
+    LastName = "Gutierrez",
+    BirhtDate = new Date(1998, 5, 23),
+    HiringDate = new Date(2022, 2, 15),
+    IsActive = true,
+    Sales = 320000000M,
+    CommissionPercentaje = 0.03F
+};
+
+Console.WriteLine(employee2);

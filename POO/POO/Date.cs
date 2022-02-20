@@ -15,7 +15,6 @@
 
         private int Checkday(int year, int month, int day)
         {
-
             if (month == 2 && day == 29 && IsLeapYear(year))
             {
                 return day;
@@ -35,7 +34,7 @@
             //fuciona mejor y es menos complicado de implementar
             return year % 400 == 0 || year % 4 == 0 && year % 100 != 0;
 
-            //funciona pero no es manera de hacerlo
+            //funciona pero no es manera de hacerlo, codigo complicado y poco legible
             //if (year % 4 == 0) // aqui preguntamos si es multiplo de 4
             //{
             //    if (year % 100 == 0)// aqui preguntamos si es multiplo de 100
